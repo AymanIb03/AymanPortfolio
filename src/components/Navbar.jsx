@@ -25,7 +25,7 @@ const Navbar = () => {
 
       {/* Desktop menu */}
       <ul className='hidden md:flex'>
-        {['home', 'about', 'skills', 'works', 'certificates','contact'].map((section) => (
+        {['home', 'about', 'skills', 'works', 'certificates', 'contact'].map((section) => (
           <li key={section} className="mx-2">
             <Link
               to={section}
@@ -43,7 +43,7 @@ const Navbar = () => {
       </ul>
 
       {/* Hamburger */}
-      <div onClick={handleClick} className='md:hidden z-10'>
+      <div onClick={handleClick} className='md:hidden z-10 text-3xl'> {/* Augmentation de la taille */}
         {!nav ? <FaBars /> : <FaTimes />}
       </div>
 
@@ -53,7 +53,7 @@ const Navbar = () => {
           nav ? 'translate-x-0' : 'translate-x-full'
         } absolute top-0 right-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center transition-transform duration-300 ease-in-out`}
       >
-        {['home', 'about', 'skills', 'work', 'contact'].map((section) => (
+        {['home', 'about', 'skills', 'works', 'certificates', 'contact'].map((section) => ( // Ajout de "certificates" et correction de "works"
           <li key={section} className="py-6 text-4xl">
             <Link 
               onClick={handleClick} 
@@ -109,7 +109,7 @@ const Navbar = () => {
               href={ResumePDF} // Lien vers le fichier PDF
               download="Ayman_CV.pdf" // Permet de télécharger le fichier directement
             >
-              Resume FR <BsFillPersonLinesFill size={30} />
+              Resume (FR) <BsFillPersonLinesFill size={30} />
             </a>
           </li>
         </ul>
