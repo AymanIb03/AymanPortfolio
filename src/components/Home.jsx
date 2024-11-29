@@ -1,5 +1,6 @@
 import React from 'react';
 import { HiArrowNarrowRight } from 'react-icons/hi';
+import { Link } from 'react-scroll'; // Import Link component
 
 const Home = () => {
   return (
@@ -24,12 +25,20 @@ const Home = () => {
         </p>
 
         <div>
-          <button className='text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600'>
-          GET TO KNOW ME
-            <span className='group-hover:rotate-90 duration-300'>
-              <HiArrowNarrowRight className='ml-3 ' />
-            </span>
-          </button>
+          {/* Button that links to About section */}
+          <Link 
+            to="about" // Link to the About section
+            smooth={true} // Smooth scrolling effect
+            duration={500} // Scroll duration
+            offset={-80} // Adjust scroll position
+          >
+            <button className='text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600'>
+              GET TO KNOW ME
+              <span className='group-hover:rotate-90 duration-300'>
+                <HiArrowNarrowRight className='ml-3 ' />
+              </span>
+            </button>
+          </Link>
         </div>
       </div>
     </div>

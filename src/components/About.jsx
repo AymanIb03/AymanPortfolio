@@ -1,8 +1,9 @@
 import React from 'react';
+import Micro from '../assets/Micro.JPG'; // Assurez-vous que l'image est bien importée
 
 const About = () => {
   return (
-    <div name='about' className='w-full py-14 bg-[#0a192f] text-gray-300 '>
+    <div name='about' className='w-full py-14 bg-[#0a192f] text-gray-300'>
       <div className='flex flex-col justify-center items-center w-full h-full'>
         <div className='max-w-[1000px] w-full grid grid-cols-2 gap-8'>
           <div className='sm:text-right pb-8 pl-4'>
@@ -11,17 +12,29 @@ const About = () => {
             </p>
           </div>
           <div></div>
-          </div>
-          <div className='max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4'>
-            <div className='sm:text-right text-4xl font-bold'>
-              <p>Hi. I'm Ayman Ibnouennadre, nice to meet you. Please take a look around.</p>
-            </div>
-            <div>
-              <p>I'm passionate about building impactful software that enhances the lives of those around me. I specialize in creating solutions for a range of clients, from individuals and small businesses to large enterprises. With a strong foundation in software engineering, I am dedicated to delivering robust, scalable, and user-friendly applications.
+        </div>
 
-Imagine what you could achieve with a software expert at your fingertips — let's make it happen!</p>  
-            </div>
+        <div className='max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4'>
+          <div className='sm:text-right text-4xl font-bold'>
+            <p>Hi. I'm Ayman Ibnouennadre, nice to meet you. Please take a look around.</p>
           </div>
+          <div>
+            <p>
+              I'm passionate about building impactful software that enhances the lives of those around me. I specialize in creating solutions for a range of clients, from individuals and small businesses to large enterprises. With a strong foundation in software engineering, I am dedicated to delivering robust, scalable, and user-friendly applications.
+               
+              Imagine what you could achieve with a software expert at your fingertips — let's make it happen!
+            </p>
+          </div>
+        </div>
+
+        {/* Section pour l'image avec une largeur réduite et responsive */}
+        <div className='w-full mt-8'>
+          <img 
+            src={Micro} 
+            alt="Ayman Ibnouennadre" 
+            className='w-full max-w-[700px] mx-auto h-auto object-cover' 
+          />
+        </div>
       </div>
     </div>
   );

@@ -16,6 +16,10 @@ import mui from '../assets/mui.png';
 import shell from '../assets/shell.png';
 import django from '../assets/Django.png';
 import flask from '../assets/Flask.png';
+import wordpress from '../assets/Wordpress.jpg';
+import shopify from '../assets/Shopify.png';
+import Oracle from '../assets/Oracle.webp';
+import php from '../assets/php.png';
 
 const Skills = () => {
   return (
@@ -91,6 +95,22 @@ const Skills = () => {
               <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
                   <img className='w-20 mx-auto' src={SQL} alt="HTML icon" />
                   <p className='my-4'>SQL DATABASES</p>
+              </div>
+              <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
+                  <img className='w-20 mx-auto' src={php} alt="HTML icon" />
+                  <p className='my-4'>PHP</p>
+              </div>
+              <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
+                  <img className='w-20 mx-auto' src={wordpress} alt="HTML icon" />
+                  <p className='my-4'>WORDPRESS</p>
+              </div>
+              <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
+                  <img className='w-20 mx-auto' src={shopify} alt="HTML icon" />
+                  <p className='my-4'>SHOPIFY</p>
+              </div>
+              <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
+                  <img className='w-20 mx-auto' src={Oracle} alt="HTML icon" />
+                  <p className='my-4'>ORACLE DBA</p>
               </div>
           </div>
       </div>

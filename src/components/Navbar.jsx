@@ -109,7 +109,7 @@ const Navbar = () => {
               href={ResumePDF} // Lien vers le fichier PDF
               download="Ayman_CV.pdf" // Permet de télécharger le fichier directement
             >
-              Resume (FR) <BsFillPersonLinesFill size={30} />
+              Resume <BsFillPersonLinesFill size={30} />
             </a>
           </li>
         </ul>

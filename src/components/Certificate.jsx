@@ -3,20 +3,33 @@ import { FaSearch } from 'react-icons/fa'; // Importing the Font Awesome search 
 
 // List of certificates with their names and companies
 const certificates = [
-    
-    { name: 'Python', fileName: 'Python.jpg', company: 'University Of Michigan' },
+    { name: 'Meta Front-end Developer', fileName: 'FrontendMeta.png', company: 'META' },
     { name: 'JavaScript', fileName: 'Javascript_meta.jpg', company: 'Meta' },
+    { name: 'React Js', fileName: 'AdvanceReact.png', company: 'META' },
+    { name: 'Python', fileName: 'Python.jpg', company: 'University Of Michigan' },
+    { name: '.NET Core', fileName: 'dotnetcore.png', company: 'EDUCBA' },
+    { name: 'Java FullStack Developer', fileName: 'JAVA.png', company: 'BOORD INFINITY' },
+    { name: 'Oracle Autonomous Database Professional Workshop', fileName: 'autonomous.png', company: 'ORACLE' },
     { name: 'Databases For Data Scientists', fileName: 'Database.jpg', company: 'University Of Colorado' },
+    { name: 'Linux Administration', fileName: 'Linux.png', company: 'IBM & REDHAT' },
     { name: 'HTML/CSS/JS ', fileName: 'HtmlCssJs.jpg', company: 'Johns Hopkins University' },
     { name: 'Object Oriented Programming', fileName: 'OOP.jpg', company: 'University Of London' },
     { name: 'Web Design ', fileName: 'WebDesign.jpg', company: 'University Of Michigan' },
     { name: 'Software Engineering ', fileName: 'SoftwareEngineering.jpg', company: 'HKUST' },
     { name: 'Soft Skills ', fileName: 'softskills.jpg', company: 'IBM' },
+    { name: 'Wordpress', fileName: 'Wordpress.png', company: 'Coursera Project Network' },
+    { name: 'Shopify', fileName: 'Shopify.png', company: 'Coursera Project Network' },
     { name: 'C++ ', fileName: 'certificatc++.jpg', company: 'EPFL' },
     { name: 'Arduino And C Porgramming', fileName: 'certificatarduino.jpg', company: 'University Of California' },
     { name: 'Unix Workbench', fileName: 'certificat_unix_page.jpg', company: 'Johns Hopkins University' },
     { name: 'African Cities: Environment and Sustainable Development Challenges', fileName: 'certificat_africa.jpg', company: 'EPFL' },
     { name: 'Documentary Research', fileName: 'certificat_recherche.jpg', company: 'Polytechnic Institute of Paris' },
+    
+    
+    
+    
+    
+    
 ];
 
 const Certificate = () => {
