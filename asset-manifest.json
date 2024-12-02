@@ -1,9 +1,11 @@
 {
   "files": {
-    "main.css": "/AymanPortfolio/static/css/main.7ca46f46.css",
-    "main.js": "/AymanPortfolio/static/js/main.d32710c0.js",
-    "static/media/Micro.JPG": "/AymanPortfolio/static/media/Micro.2c68b8235ab75fc2c226.JPG",
+    "main.css": "/AymanPortfolio/static/css/main.1b3e13b1.css",
+    "main.js": "/AymanPortfolio/static/js/main.337cba62.js",
+    "static/media/Micro.JPG": "/AymanPortfolio/static/media/Micro.7248815ca2e7c2399c8d.JPG",
+    "static/media/DSC_0587.jpg": "/AymanPortfolio/static/media/DSC_0587.15673832f53d799972b3.jpg",
     "static/media/Delivery.png": "/AymanPortfolio/static/media/Delivery.a03be97188b64ff79d34.png",
+    "static/media/DSC_0582.jpg": "/AymanPortfolio/static/media/DSC_0582.e8065f4d640debcc2787.jpg",
     "static/media/OOP.jpg": "/AymanPortfolio/static/media/OOP.ae3043b8e894b53859e6.jpg",
     "static/media/Doctor(1).png": "/AymanPortfolio/static/media/Doctor(1).ae16f1c858cb49efc7b8.png",
     "static/media/WebDesign.jpg": "/AymanPortfolio/static/media/WebDesign.817a849825f815a3a771.jpg",
@@ -39,7 +41,7 @@
     "static/media/potfolio(1).png": "/AymanPortfolio/static/media/potfolio(1).2579a11c8ddd92e945f4.png",
     "static/media/timesheet.png": "/AymanPortfolio/static/media/timesheet.92843612797ccc7f93a1.png",
     "static/media/Ayman cv pfa.pdf": "/AymanPortfolio/static/media/Ayman cv pfa.5d00b352a6a0693bbdf0.pdf",
-    "static/media/timesheet(3).png": "/AymanPortfolio/static/media/timesheet(3).ab789aa64f0b40e5d5a4.png",
+    "static/media/timesheet(3).png": "/AymanPortfolio/static/media/timesheet(3).703a050ddaca14e4cb74.png",
     "static/media/Delivery(5).png": "/AymanPortfolio/static/media/Delivery(5).211c5a690be4a5e59345.png",
     "static/media/Bootstrap.png": "/AymanPortfolio/static/media/Bootstrap.21c4b8805fff51b47615.png",
     "static/media/Wordpress.jpg": "/AymanPortfolio/static/media/Wordpress.0d3c040a5dae6f689d9e.jpg",
@@ -65,11 +67,11 @@
     "static/media/shell.png": "/AymanPortfolio/static/media/shell.f079a524839fa8504c7a.png",
     "static/media/javascript.png": "/AymanPortfolio/static/media/javascript.1ccd6ef9bb1f9c84ef00.png",
     "index.html": "/AymanPortfolio/index.html",
-    "main.7ca46f46.css.map": "/AymanPortfolio/static/css/main.7ca46f46.css.map",
-    "main.d32710c0.js.map": "/AymanPortfolio/static/js/main.d32710c0.js.map"
+    "main.1b3e13b1.css.map": "/AymanPortfolio/static/css/main.1b3e13b1.css.map",
+    "main.337cba62.js.map": "/AymanPortfolio/static/js/main.337cba62.js.map"
   },
   "entrypoints": [
-    "static/css/main.7ca46f46.css",
-    "static/js/main.d32710c0.js"
+    "static/css/main.1b3e13b1.css",
+    "static/js/main.337cba62.js"
   ]
 }
