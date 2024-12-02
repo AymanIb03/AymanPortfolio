@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/AymanPortfolio/static/css/main.1b3e13b1.css",
-    "main.js": "/AymanPortfolio/static/js/main.337cba62.js",
+    "main.css": "/AymanPortfolio/static/css/main.6116105b.css",
+    "main.js": "/AymanPortfolio/static/js/main.ec01c8ab.js",
     "static/media/Micro.JPG": "/AymanPortfolio/static/media/Micro.7248815ca2e7c2399c8d.JPG",
     "static/media/DSC_0587.jpg": "/AymanPortfolio/static/media/DSC_0587.15673832f53d799972b3.jpg",
     "static/media/Delivery.png": "/AymanPortfolio/static/media/Delivery.a03be97188b64ff79d34.png",
@@ -67,11 +67,11 @@
     "static/media/shell.png": "/AymanPortfolio/static/media/shell.f079a524839fa8504c7a.png",
     "static/media/javascript.png": "/AymanPortfolio/static/media/javascript.1ccd6ef9bb1f9c84ef00.png",
     "index.html": "/AymanPortfolio/index.html",
-    "main.1b3e13b1.css.map": "/AymanPortfolio/static/css/main.1b3e13b1.css.map",
-    "main.337cba62.js.map": "/AymanPortfolio/static/js/main.337cba62.js.map"
+    "main.6116105b.css.map": "/AymanPortfolio/static/css/main.6116105b.css.map",
+    "main.ec01c8ab.js.map": "/AymanPortfolio/static/js/main.ec01c8ab.js.map"
   },
   "entrypoints": [
-    "static/css/main.1b3e13b1.css",
-    "static/js/main.337cba62.js"
+    "static/css/main.6116105b.css",
+    "static/js/main.ec01c8ab.js"
   ]
 }
