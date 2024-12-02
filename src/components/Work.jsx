@@ -1,17 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { data } from "../data/data.js";
-import AOS from 'aos';
-import 'aos/dist/aos.css'; // Import de AOS CSS
-import { motion } from 'framer-motion'; // Importer Framer Motion pour les animations
+import { motion, AnimatePresence } from 'framer-motion'; // Importer AnimatePresence de framer-motion
 
 const Work = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [currentProject, setCurrentProject] = useState(null);
-
-    useEffect(() => {
-        AOS.init({ duration: 1000, easing: 'ease-in-out', once: true });
-        window.addEventListener('load', AOS.refresh);
-    }, []);
 
     const openModal = (project) => {
         setCurrentProject(project);
@@ -29,32 +22,22 @@ const Work = () => {
         <div name='works' className='w-full py-14 text-gray-300 bg-[#0a192f]'>
             <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
                 <div className='pb-8'>
-                    <p 
-                        className='text-4xl font-bold inline border-b-4 text-gray-300 border-pink-600'
-                        data-aos="fade-up"
-                    >
+                    <p className='text-4xl font-bold inline border-b-4 text-gray-300 border-pink-600'>
                         Works
                     </p>
-                    <p 
-                        className='py-6' 
-                        data-aos="fade-up"
-                    >
+                    <p className='py-6'>
                         // Discover some of my recent projects
                     </p>
                 </div>
 
-                {/* Project grid avec animation */} 
+                {/* Project grid sans animation */} 
                 <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
                     {projectList.map((project) => (
-                        <motion.div
+                        <div
                             key={project.id}
                             style={{ backgroundImage: `url(${project.image})` }}
                             className="shadow-lg shadow-[#040c16] group container rounded-md 
                                       flex justify-center text-center items-center mx-auto content-div"
-                            initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 1 }}
-                            data-aos="fade-up" // Animation pour chaque projet
                         >
                             <div className="opacity-0 group-hover:opacity-100 p-4">
                                 <span className="text-xl font-semibold text-white tracking-wider">
@@ -90,49 +73,58 @@ const Work = () => {
                                     </button>
                                 </div>
                             </div>
-                        </motion.div>
+                        </div>
                     ))}
                 </div>
 
-                {/* Modal pour les détails du projet */}
-                {isModalOpen && currentProject && (
-                    <div
-                        className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50"
-                        onClick={closeModal}
-                    >
-                        <div
-                            className="bg-gray-800 rounded-lg max-w-3xl w-full h-[80vh] overflow-y-auto relative"
-                            onClick={(e) => e.stopPropagation()}
-                            data-aos="fade-up" // Animation du modal
+                {/* Utilisation de AnimatePresence pour animer la fermeture du modal */}
+                <AnimatePresence>
+                    {isModalOpen && currentProject && (
+                        <motion.div
+                            className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50"
+                            onClick={closeModal}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 0.5 }}
                         >
-                            <div className="sticky top-0 bg-gray-800 flex justify-between items-center p-4 border-b border-gray-600 z-10">
-                                <h2 className="text-xl font-bold text-white">{currentProject.name}</h2>
-                                <button
-                                    onClick={closeModal}
-                                    className="text-pink-600 text-2xl font-bold"
-                                >
-                                    ❌
-                                </button>
-                            </div>
-
-                            <div className="p-6">
-                                <p className="text-gray-300 mb-6">{currentProject.description}</p>
-                                 
-                                {/* Galerie d'images */}
-                                <div className="space-y-4">
-                                    {currentProject.gallery.map((image, index) => (
-                                        <img
-                                            key={index}
-                                            src={image}
-                                            alt={`${currentProject.name} screenshot ${index + 1}`}
-                                            className="w-full h-auto rounded-lg"
-                                        />
-                                    ))}
+                            <motion.div
+                                className="bg-gray-800 rounded-lg max-w-3xl w-full h-[80vh] overflow-y-auto relative"
+                                onClick={(e) => e.stopPropagation()}
+                                initial={{ scale: 0.9 }}
+                                animate={{ scale: 1 }}
+                                exit={{ scale: 0.9 }}
+                                transition={{ duration: 0.5 }}
+                            >
+                                <div className="sticky top-0 bg-gray-800 flex justify-between items-center p-4 border-b border-gray-600 z-10">
+                                    <h2 className="text-xl font-bold text-white">{currentProject.name}</h2>
+                                    <button
+                                        onClick={closeModal}
+                                        className="text-pink-600 text-2xl font-bold"
+                                    >
+                                        ❌
+                                    </button>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                )}
+
+                                <div className="p-6">
+                                    <p className="text-gray-300 mb-6">{currentProject.description}</p>
+                                     
+                                    {/* Galerie d'images */}
+                                    <div className="space-y-4">
+                                        {currentProject.gallery.map((image, index) => (
+                                            <img
+                                                key={index}
+                                                src={image}
+                                                alt={`${currentProject.name} screenshot ${index + 1}`}
+                                                className="w-full h-auto rounded-lg"
+                                            />
+                                        ))}
+                                    </div>
+                                </div>
+                            </motion.div>
+                        </motion.div>
+                    )}
+                </AnimatePresence>
             </div>
         </div>
     );

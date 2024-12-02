@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaSearch } from 'react-icons/fa'; // Importing the Font Awesome search icon
+import { motion, AnimatePresence } from 'framer-motion'; // Importer framer-motion
 
 const certificates = [
     { name: 'Meta Front-end Developer', fileName: 'FrontendMeta.png', company: 'META' },
@@ -23,12 +24,6 @@ const certificates = [
     { name: 'Unix Workbench', fileName: 'certificat_unix_page.jpg', company: 'Johns Hopkins University' },
     { name: 'African Cities: Environment and Sustainable Development Challenges', fileName: 'certificat_africa.jpg', company: 'EPFL' },
     { name: 'Documentary Research', fileName: 'certificat_recherche.jpg', company: 'Polytechnic Institute of Paris' },
-    
-    
-    
-    
-    
-    
 ];
 
 const Certificate = () => {
@@ -82,34 +77,43 @@ const Certificate = () => {
                     ))}
                 </div>
 
-                {/* Modal to display the enlarged certificate */}
-                {selectedCertificate && (
-                    <div
-                        className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50"
-                        onClick={closeModal} // Close modal when clicking outside
-                        style={{ top: '60px' }} // Offset to avoid the navbar
-                    >
-                        <div
-                            className="bg-gray-800 p-4 rounded-lg max-w-3xl w-full relative"
-                            onClick={(e) => e.stopPropagation()} // Prevent propagation to avoid closing modal on content click
+                {/* Utilisation de AnimatePresence pour l'animation de fermeture du modal */}
+                <AnimatePresence>
+                    {selectedCertificate && (
+                        <motion.div
+                            className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50"
+                            onClick={closeModal} // Close modal when clicking outside
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 0.5 }}
                         >
-                            <button
-                                onClick={closeModal}
-                                className="absolute top-2 right-2 text-pink-600 text-2xl font-bold"
+                            <motion.div
+                                className="bg-gray-800 p-4 rounded-lg max-w-3xl w-full relative"
+                                onClick={(e) => e.stopPropagation()} // Prevent propagation to avoid closing modal on content click
+                                initial={{ scale: 0.9 }}
+                                animate={{ scale: 1 }}
+                                exit={{ scale: 0.9 }}
+                                transition={{ duration: 0.5 }}
                             >
-                                ❌
-                            </button>
-                            <div className="flex justify-between mb-4">
-                                <h2 className="text-xl font-bold text-white">{selectedCertificate.name}</h2>
-                            </div>
-                            <img
-                                src={require(`../assets/Cer/${selectedCertificate.fileName}`)}
-                                alt={selectedCertificate.name}
-                                className="w-full h-auto"
-                            />
-                        </div>
-                    </div>
-                )}
+                                <button
+                                    onClick={closeModal}
+                                    className="absolute top-2 right-2 text-pink-600 text-2xl font-bold"
+                                >
+                                    ❌
+                                </button>
+                                <div className="flex justify-between mb-4">
+                                    <h2 className="text-xl font-bold text-white">{selectedCertificate.name}</h2>
+                                </div>
+                                <img
+                                    src={require(`../assets/Cer/${selectedCertificate.fileName}`)}
+                                    alt={selectedCertificate.name}
+                                    className="w-full h-auto"
+                                />
+                            </motion.div>
+                        </motion.div>
+                    )}
+                </AnimatePresence>
             </div>
         </div>
     );

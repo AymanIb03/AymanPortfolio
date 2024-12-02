@@ -54,7 +54,7 @@ const Skills = () => {
               </div>
               <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
                   <img className='w-20 mx-auto' src={Dotnet} alt="HTML icon" />
-                  <p className='my-4'>ASP.NET CORE</p>
+                  <p className='my-4'>.NET CORE</p>
               </div>
               <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
                   <img className='w-20 mx-auto' src={C} alt="HTML icon" />
