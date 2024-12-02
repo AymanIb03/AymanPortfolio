@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { FaSearch } from 'react-icons/fa'; // Importing the Font Awesome search icon
 
-// List of certificates with their names and companies
 const certificates = [
     { name: 'Meta Front-end Developer', fileName: 'FrontendMeta.png', company: 'META' },
     { name: 'JavaScript', fileName: 'Javascript_meta.jpg', company: 'Meta' },

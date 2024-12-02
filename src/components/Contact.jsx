@@ -26,7 +26,7 @@ const Contact = () => {
   return (
     <div
       name="contact"
-      className="w-full min-h-screen bg-gradient-to-b from-[#0a192f] to-[#1c2736] flex justify-center items-center p-6"
+      className="w-full min-h-full bg-gradient-to-b from-[#0a192f] to-[#1c2736] flex justify-center items-center p-6 pb-12" // Ajuste min-h-full et pb-12 pour plus d'espace en bas
     >
       <form
         onSubmit={sendEmail}
@@ -37,7 +37,7 @@ const Contact = () => {
             Contact
           </p>
           <p className="text-gray-400 py-4">
-          // Submit the form below or send me an email at
+            // Submit the form below or send me an email at
             <a href="mailto:ayman.ibnouennadre@gmail.com" className="text-pink-600 underline ml-1">
               ayman.ibnouennadre@gmail.com
             </a>

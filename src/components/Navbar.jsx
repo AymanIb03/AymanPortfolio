@@ -4,18 +4,22 @@ import {
   FaTimes,
   FaGithub,
   FaLinkedin,
-  FaUserTie,
   FaHandHoldingUsd,
+  FaShareAlt, // Icône pour les réseaux sociaux
 } from 'react-icons/fa';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
+import { IoIosArrowUp } from 'react-icons/io'; // Icône de la flèche vers le haut
 import AI from '../assets/AI.png';
 import { Link } from 'react-scroll';
-import ResumePDF from '../assets/Ayman cv pfa.pdf'; // Importez le fichier PDF
+import ResumePDF from '../assets/Ayman cv pfa.pdf';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
+  const [socialVisible, setSocialVisible] = useState(true); // Etat pour gérer la visibilité des icônes sociales
 
   const handleClick = () => setNav(!nav);
+
+  const toggleSocialIcons = () => setSocialVisible(!socialVisible); // Fonction pour changer l'état de visibilité des icônes sociales
 
   return (
     <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300 z-10'>
@@ -23,7 +27,7 @@ const Navbar = () => {
         <img src={AI} alt='Logo Image' style={{ width: '50px' }} />
       </div>
 
-      {/* Desktop menu */}
+      {/* Menu de navigation - Desktop */}
       <ul className='hidden md:flex'>
         {['home', 'about', 'skills', 'works', 'certificates', 'contact'].map((section) => (
           <li key={section} className="mx-2">
@@ -42,8 +46,8 @@ const Navbar = () => {
         ))}
       </ul>
 
-      {/* Hamburger */}
-      <div onClick={handleClick} className='md:hidden z-10 text-3xl'> {/* Augmentation de la taille */}
+      {/* Hamburger pour le menu mobile */}
+      <div onClick={handleClick} className='md:hidden z-10 text-3xl'>
         {!nav ? <FaBars /> : <FaTimes />}
       </div>
 
@@ -53,7 +57,7 @@ const Navbar = () => {
           nav ? 'translate-x-0' : 'translate-x-full'
         } absolute top-0 right-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center transition-transform duration-300 ease-in-out`}
       >
-        {['home', 'about', 'skills', 'works', 'certificates', 'contact'].map((section) => ( // Ajout de "certificates" et correction de "works"
+        {['home', 'about', 'skills', 'works', 'certificates', 'contact'].map((section) => (
           <li key={section} className="py-6 text-4xl">
             <Link 
               onClick={handleClick} 
@@ -70,9 +74,10 @@ const Navbar = () => {
         ))}
       </ul>
 
-      {/* Social Icons */}
-      <div className='flex fixed flex-col top-[35%] left-0'>
+      {/* Social Icons (affichées selon l'état socialVisible) */}
+      <div className={`flex fixed flex-col top-[35%] left-0 transition-transform duration-300 ease-in-out ${socialVisible ? 'translate-x-0' : '-translate-x-[200px]'}`}>
         <ul>
+          {/* Liste des icônes sociales */}
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600'>
             <a
               className='flex justify-between items-center w-full text-gray-300'
@@ -106,13 +111,37 @@ const Navbar = () => {
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69]'>
             <a
               className='flex justify-between items-center w-full text-gray-300'
-              href={ResumePDF} // Lien vers le fichier PDF
-              download="Ayman_CV.pdf" // Permet de télécharger le fichier directement
+              href={ResumePDF}
+              download="Ayman_CV.pdf"
             >
               Resume <BsFillPersonLinesFill size={30} />
             </a>
           </li>
         </ul>
+      </div>
+
+      {/* Bouton pour afficher/masquer les icônes sociales */}
+      <div 
+        onClick={toggleSocialIcons} 
+        className='fixed bottom-8 left-8 bg-pink-600 p-4 rounded-full cursor-pointer text-white hover:bg-pink-700 transition-all duration-300'
+      >
+        {socialVisible ? (
+          <FaTimes size={20} />
+        ) : (
+          <FaShareAlt size={20} />
+        )}
+      </div>
+
+      {/* Bouton flèche vers le haut */}
+      <div className='fixed bottom-8 right-8 bg-pink-600 p-4 rounded-full cursor-pointer hover:bg-pink-700 transition-all duration-300'>
+        <Link
+          to="home"
+          smooth={true}
+          duration={500}
+          className='flex justify-center items-center text-white'
+        >
+          <IoIosArrowUp size={24} />
+        </Link>
       </div>
     </div>
   );
