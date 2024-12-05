@@ -6,7 +6,7 @@ import Skills from "./components/Skills";
 import Work from "./components/Work";
 import Certificate from "./components/Certificate";
 import { Helmet } from 'react-helmet';
-import logo from './assets/AI.png';
+
 
 function App() {
   return (

@@ -49,19 +49,19 @@ const Home = () => {
           initial={{ opacity: 0, y: 50 }}
           viewport={{ once: false }} 
           transition={{ duration: 1, delay: 1 }}
-        >
-          I will graduate in 2026 from the 
+        > 
+        <p>
+          I am a Software Engineer with a deep passion for creating innovative and scalable software solutions. Drawing from extensive hands-on experience and a strong academic foundation from &nbsp;
+          
           <a 
             href="https://emsi.ma/" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="text-pink-600 underline hover:text-pink-400 transition-all duration-300"
           >
-             Moroccan School of Engineering Sciences (EMSI)
-          </a>, where I am honing my
-          skills in software engineering and preparing to tackle real-world technological
-          challenges. I am passionate about creating impactful software solutions and
-          continuously expanding my knowledge in modern development practices.
+            the  Moroccan School of Engineering Sciences 
+          </a>, where I am honing some of my skills, and supplementing my education with self-directed learning
+          , I specialize in tackling complex technical challenges and delivering impactful applications. I am always eager to learn, grow, and bring cutting-edge solutions to life, ensuring that every project I work on is optimized, efficient, and user-centric. </p>
         </motion.p>
 
         {/* Button with hover and animation effects */}

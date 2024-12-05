@@ -5,7 +5,7 @@ import {
   FaGithub,
   FaLinkedin,
   FaHandHoldingUsd,
-  FaShareAlt, // Icône pour les réseaux sociaux
+  FaShareAlt,
 } from 'react-icons/fa';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { IoIosArrowUp } from 'react-icons/io'; // Icône de la flèche vers le haut
@@ -16,6 +16,7 @@ import ResumePDF from '../assets/Ayman cv pfa.pdf';
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [socialVisible, setSocialVisible] = useState(true); // Etat pour gérer la visibilité des icônes sociales
+  const [isHomeVisible, setIsHomeVisible] = useState(false); // Etat pour vérifier si la section "home" est active
 
   const handleClick = () => setNav(!nav);
 
@@ -39,6 +40,13 @@ const Navbar = () => {
               offset={-80}
               className="border-2 border-transparent px-4 py-2 hover:bg-pink-600 hover:border-pink-600 duration-300"
               activeClass="bg-pink-600 border-pink-600"
+              onSetActive={(section) => {
+                if (section === 'home') {
+                  setIsHomeVisible(true); // Lorsque la section "home" devient active, on le garde en visible
+                } else {
+                  setIsHomeVisible(false); // Masquer la flèche dans les autres sections
+                }
+              }}
             >
               {section.toUpperCase()}
             </Link>
@@ -67,6 +75,13 @@ const Navbar = () => {
               spy={true}
               offset={-80}
               activeClass="text-pink-600"
+              onSetActive={(section) => {
+                if (section === 'home') {
+                  setIsHomeVisible(true); // Lorsqu'on est sur la section "home", la flèche est cachée
+                } else {
+                  setIsHomeVisible(false); // Dans les autres sections, on montre la flèche
+                }
+              }}
             >
               {section.charAt(0).toUpperCase() + section.slice(1)}
             </Link>
@@ -132,15 +147,17 @@ const Navbar = () => {
         )}
       </div>
 
-      {/* Bouton flèche vers le haut */}
-      <div className='fixed bottom-8 right-8 bg-pink-600 p-4 rounded-full cursor-pointer hover:bg-pink-700 transition-all duration-300'>
+      {/* Bouton flèche vers le haut avec effet de transition fade-in */}
+      <div
+        className={`fixed bottom-8 right-8 bg-pink-600 p-4 rounded-full cursor-pointer hover:bg-pink-700 transition-opacity duration-500 ease-out ${isHomeVisible ? 'opacity-0' : 'opacity-100'}`}
+      >
         <Link
           to="home"
           smooth={true}
           duration={500}
           className='flex justify-center items-center text-white'
         >
-          <IoIosArrowUp size={24} />
+          <IoIosArrowUp size={20} />
         </Link>
       </div>
     </div>

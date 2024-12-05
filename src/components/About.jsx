@@ -48,9 +48,9 @@ const About = () => {
             transition={{ duration: 1, delay: 0.4 }}
           >
             <p>
-              I'm passionate about building impactful software that enhances the lives of those around me. I specialize in creating solutions for a range of clients, from individuals and small businesses to large enterprises. With a strong foundation in software engineering, I am dedicated to delivering robust, scalable, and user-friendly applications.
-              Imagine what you could achieve with a software expert at your fingertips — let's make it happen!
+            I'm passionate about building impactful software that enhances the lives of those around me. I specialize in creating solutions for a range of clients, from individuals and small businesses to large enterprises. With a strong foundation in software engineering and years of hands-on experience in tackling a variety of complex projects, I am dedicated to delivering robust, scalable, and user-friendly applications. My experience allows me to tailor solutions that meet specific client needs while ensuring high quality and performance. Imagine what you could achieve with a software expert at your fingertips. 
             </p>
+            <p className="text-pink-600  hover:text-pink-400 transition-all duration-300">let's make it happen!</p>
           </motion.div>
         </div>
 
