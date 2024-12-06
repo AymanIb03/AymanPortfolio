@@ -154,7 +154,7 @@ const Navbar = () => {
         <Link
           to="home"
           smooth={true}
-          duration={500}
+          duration={700}
           className='flex justify-center items-center text-white'
         >
           <IoIosArrowUp size={20} />

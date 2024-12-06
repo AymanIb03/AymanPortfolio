@@ -50,19 +50,21 @@ const Home = () => {
           viewport={{ once: false }} 
           transition={{ duration: 1, delay: 1 }}
         > 
-        <p>
-          I am a Software Engineer with a deep passion for creating innovative and scalable software solutions. Drawing from extensive hands-on experience and a strong academic foundation from &nbsp;
+        
+        <p  className="text-justify ">
+        As a Full-Stack Developer and Software Engineer, I am passionate about building innovative and scalable software solutions that address real-world challenges. With a solid foundation from &nbsp;
           
           <a 
             href="https://emsi.ma/" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="text-pink-600 underline hover:text-pink-400 transition-all duration-300"
+            className="text-pink-600 underline hover:text-pink-400 transition-all duration-300 text-justified"
           >
-            the  Moroccan School of Engineering Sciences 
-          </a>, where I am honing some of my skills, and supplementing my education with self-directed learning
-          , I specialize in tackling complex technical challenges and delivering impactful applications. I am always eager to learn, grow, and bring cutting-edge solutions to life, ensuring that every project I work on is optimized, efficient, and user-centric. </p>
-        </motion.p>
+            The  Moroccan School of Engineering Sciences 
+          </a>
+          &nbsp; and hands-on experience in modern development practices, I specialize in creating efficient, high-performance applications. Driven by a desire to constantly learn and evolve, I focus on delivering impactful and user-centered solutions that stand out in today’s tech landscape.
+        </p>
+          </motion.p>
 
         {/* Button with hover and animation effects */}
         <div>
