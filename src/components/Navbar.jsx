@@ -11,7 +11,7 @@ import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { IoIosArrowUp } from 'react-icons/io'; // Icône de la flèche vers le haut
 import AI from '../assets/AI.png';
 import { Link } from 'react-scroll';
-import ResumePDF from '../assets/Ayman cv pfa.pdf';
+import ResumePDF from '../assets/Ayman CV .pdf';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
