@@ -52,7 +52,7 @@ const Home = () => {
         > 
         
         <p  className="text-justify ">
-        As a Full-Stack Developer and Software Engineer, I am passionate about building innovative and scalable software solutions that address real-world challenges. With a solid foundation from &nbsp;
+        As a Full-Stack Developer, I create scalable software solutions to solve real-world challenges. With a solid foundation from  &nbsp;
           
           <a 
             href="https://emsi.ma/" 
@@ -62,7 +62,7 @@ const Home = () => {
           >
             The  Moroccan School of Engineering Sciences 
           </a>
-          &nbsp; and hands-on experience in modern development practices, I specialize in creating efficient, high-performance applications. Driven by a desire to constantly learn and evolve, I focus on delivering impactful and user-centered solutions that stand out in today’s tech landscape.
+          &nbsp; and experience in modern development practices, I build high-performance, user-centered applications that stand out in today’s tech world.
         </p>
           </motion.p>
 
